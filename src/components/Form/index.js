@@ -5,23 +5,26 @@ class Form extends Component {
     super();
 
     this.state = {
-      value: '',
+      value: "",
     };
   }
 
   onSubmit = (e) => {
     e.preventDefault();
 
-    this.props.onChange(this.state.value)
+    this.props.onChange(this.state.value);
+    this.setState({
+      value: "",
+    });
   };
 
   onChange = (e) => {
-    const {value} = e.target; //отримуємо значення
+    const { value } = e.target; //отримуємо значення
 
     this.setState({
-        value: value
-    })
-  }
+      value: +value,
+    });
+  };
 
   render() {
     return (
