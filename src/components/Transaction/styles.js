@@ -12,3 +12,4 @@ export const Wrapper = styled.div`
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
 `;
+Wrapper.displayName = "TransactionWrapper";

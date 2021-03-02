@@ -28,7 +28,7 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit} className="d-flex">
+      <form onSubmit={this.onSubmit} className="">
         <input
           className="form-control"
           type="number"
@@ -37,7 +37,7 @@ class Form extends Component {
           value={this.state.value}
           onChange={this.onChange}
         />
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="">
           Зберегти
         </button>
       </form>
