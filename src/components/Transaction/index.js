@@ -1,15 +1,13 @@
 import PropTypes from "prop-types";
 
-import { Wrapper } from "./styles";
+import { Wrapper, TransactionDate, Value, Comment } from "./styles";
 
-const Transaction = ({ transaction: {value, label} }) => {
+const Transaction = ({ transaction: { value, date, comment } }) => {
   return (
-    <Wrapper
-      value={value}
-      //передам значення для tyled-components
-    >
-      Label: {label}
-      <p>Value: {value}</p>
+    <Wrapper value={value}>
+      <TransactionDate>{ date }</TransactionDate>
+      <Value>Value: {value.toFixed(2)}</Value>
+      <Comment>{ comment }</Comment>
     </Wrapper>
   );
 };
